@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="15A204h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="udemy__78_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IPK-v6-yzq">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Kiss The Rain" id="3SR-WR-Rrp">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="Xi4-lk-6o1">
+                                            <connections>
+                                                <action selector="play:" destination="vXZ-lx-hvc" id="KdB-MV-KBw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r9u-tU-fdP">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <barButtonItem systemItem="pause" id="mzZ-ty-wDY">
+                                        <connections>
+                                            <action selector="pause:" destination="vXZ-lx-hvc" id="Ot5-sc-jOe"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vkt-DE-6pg"/>
+                                    <barButtonItem title="Stop" id="Fj5-f4-JvN">
+                                        <connections>
+                                            <action selector="stop:" destination="vXZ-lx-hvc" id="qvi-Kf-76g"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="images.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="IvY-ey-hUB">
+                                <rect key="frame" x="137" y="194" width="326" height="211"/>
+                                <animations/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="6pZ-N2-Pgf">
+                                <rect key="frame" x="241" y="475" width="118" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="volume:" destination="vXZ-lx-hvc" eventType="valueChanged" id="twI-ep-wW7"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r9u-tU-fdP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="2tL-c0-Q0t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r9u-tU-fdP" secondAttribute="trailing" constant="-16" id="chV-Ss-hvD"/>
+                            <constraint firstAttribute="centerX" secondItem="IvY-ey-hUB" secondAttribute="centerX" id="dDu-aM-oVk"/>
+                            <constraint firstItem="IPK-v6-yzq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="exA-gS-Mus"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IPK-v6-yzq" secondAttribute="trailing" constant="-16" id="xXq-gA-ema"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="r9u-tU-fdP" secondAttribute="bottom" id="yvQ-Gb-iyk"/>
+                            <constraint firstAttribute="centerX" secondItem="6pZ-N2-Pgf" secondAttribute="centerX" id="zH8-p1-bfD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="volume" destination="6pZ-N2-Pgf" id="sG6-sS-UnG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="219" y="247"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="images.jpg" width="261" height="193"/>
+    </resources>
+</document>
